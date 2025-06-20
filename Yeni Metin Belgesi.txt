@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.26;
+pragma solidity ^0.8.26;  // "paragma" Hangi Solidity sürümünü kullandığımı belirler 
 
-contract Fun{
-
-    uint public fundenme = 12;
-
-    function yeni (uint numbernev) public {
-        fundenme = numbernev;   
-        }
-
+contract MerhabaDunya { //"contract" Akıllı sözleşme yapısını başlatır
+    string public message = "Merhaba Blockchain!";  // "public" Değişkeni veya fonksiyonu dışarıdan görünür yapar yani halka açık
+ 
+    function setMessage(string memory newMessage) public { // "memory" Geçici bellek; işlem sırasında geçerlidir
+        message = newMessage; 
+    }
 }
+// "Deploy" Kontratı sanal blockchain’e yükler
+// "Cal" Fonksiyonu çalıştırır
